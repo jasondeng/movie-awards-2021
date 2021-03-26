@@ -4,6 +4,8 @@ import Api from '../../Api/Api';
 
 import CategoryList from '../CategoryList/CategoryList';
 
+import './Ballot.scss';
+
 const Ballot = () => {
   const [ballotData, setBallotData] = useState([]);
 

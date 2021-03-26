@@ -1,11 +1,13 @@
 import React from 'react';
 
+import './Nominee.scss';
+
 const Nominee = ({ nominee }) => {
   const { title, photoUrL } = nominee;
   return (
-    <div>
-      <h3>{title}</h3>
-      <img src={photoUrL} alt={title} />
+    <div className="nominee">
+      <h3 className="nominee_title">{title}</h3>
+      <img className="nominee_image" src={photoUrL} alt={title} />
       <button>Select</button>
     </div>
   );
