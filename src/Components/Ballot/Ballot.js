@@ -10,7 +10,7 @@ import CategoryList from '../CategoryList/CategoryList';
 
 import './Ballot.scss';
 
-const Ballot = () => {
+const Ballot = ({ setShowModal }) => {
   const [ballotData, setBallotData] = useState([]);
   const [selectedNomimees, setSelectedNominees] = useState({});
 
@@ -28,6 +28,10 @@ const Ballot = () => {
     }));
   };
 
+  const handleSubmit = () => {
+    setShowModal(selectedNomimees);
+  };
+
   const isButtonEnabled = areAllNomineesSelected(selectedNomimees);
 
   return (
@@ -37,7 +41,9 @@ const Ballot = () => {
         selectedNomimees={selectedNomimees}
         handleNomineeSelect={handleNomineeSelect}
       />
-      <button disabled={!isButtonEnabled}>Submit</button>
+      <button disabled={!isButtonEnabled} onClick={handleSubmit}>
+        Submit
+      </button>
     </div>
   );
 };
