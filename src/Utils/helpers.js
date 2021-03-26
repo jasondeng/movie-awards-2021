@@ -4,3 +4,7 @@ export const getInitialNominees = (categories) => {
     {}
   );
 };
+
+export const areAllNomineesSelected = (selectedNomimees) => {
+  return Object.values(selectedNomimees).every((nominee) => Boolean(nominee));
+};

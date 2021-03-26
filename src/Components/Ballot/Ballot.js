@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import Api from '../../Api/Api';
-import { getInitialNominees } from '../../Utils/helpers';
+import {
+  getInitialNominees,
+  areAllNomineesSelected,
+} from '../../Utils/helpers';
 
 import CategoryList from '../CategoryList/CategoryList';
 
@@ -9,7 +12,7 @@ import './Ballot.scss';
 
 const Ballot = () => {
   const [ballotData, setBallotData] = useState([]);
-  const [selectedNomimees, setSelectedNominees] = useState(null);
+  const [selectedNomimees, setSelectedNominees] = useState({});
 
   useEffect(() => {
     Api.getBallotData().then(({ items }) => {
@@ -25,12 +28,16 @@ const Ballot = () => {
     }));
   };
 
+  const isButtonEnabled = areAllNomineesSelected(selectedNomimees);
+
   return (
     <div className="ballot">
       <CategoryList
         categories={ballotData}
+        selectedNomimees={selectedNomimees}
         handleNomineeSelect={handleNomineeSelect}
       />
+      <button disabled={!isButtonEnabled}>Submit</button>
     </div>
   );
 };

@@ -3,11 +3,17 @@
   flex-direction: column;
   align-items: center;
   width: 300px;
-
+  background-color: #009b86;
+  border-radius: 10px;
   border: 1px solid black;
   margin: 8px;
 
-  &_title {
+  &--hovered {
+    background-color: #34ac9c;
+  }
+
+  &--selected {
+    background-color: #099bb3;
   }
 
   &_image {

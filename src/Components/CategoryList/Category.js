@@ -4,12 +4,17 @@ import NomineeList from '../NomineeList/NomineeList';
 
 import './Category.scss';
 
-const Category = ({ category, handleNomineeSelect }) => {
+const Category = ({ category, selectedNomimees, handleNomineeSelect }) => {
   const { title, items } = category;
   return (
     <section className="category">
       <h2>{title}</h2>
-      <NomineeList nominees={items} handleNomineeSelect={handleNomineeSelect} />
+      <NomineeList
+        nominees={items}
+        category={category}
+        selectedNomimees={selectedNomimees}
+        handleNomineeSelect={handleNomineeSelect}
+      />
     </section>
   );
 };

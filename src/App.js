@@ -8,7 +8,6 @@ function App() {
         <h1>Awards 2021</h1>
       </header>
       <Ballot />
-      <button>Submit</button>
     </div>
   );
 }
