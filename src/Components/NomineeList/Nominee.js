@@ -31,7 +31,9 @@ const Nominee = ({
       onMouseEnter={handleMouseOver}
       onMouseLeave={handleMouseOver}
     >
-      <h3 className="nominee_title">{title}</h3>
+      <h3 className="nominee_title" title={title}>
+        {title}
+      </h3>
       <img className="nominee_image" src={photoUrL} alt={title} />
       <button onClick={handleClick}>Select</button>
     </div>

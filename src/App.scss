@@ -1,4 +1,5 @@
 .App {
+  box-sizing: border-box;
   width: 960px;
   display: flex;
   flex-direction: column;
@@ -12,5 +13,25 @@
     right: 0;
     bottom: 0;
     opacity: 0.2;
+  }
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  background-color: #009b86;
+  padding: 0.25em 0.75em;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+
+  &:hover {
+    background-color: #34ac9c;
   }
 }
