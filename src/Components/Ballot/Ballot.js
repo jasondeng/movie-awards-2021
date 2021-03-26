@@ -41,7 +41,11 @@ const Ballot = ({ setShowModal }) => {
         selectedNomimees={selectedNomimees}
         handleNomineeSelect={handleNomineeSelect}
       />
-      <button disabled={!isButtonEnabled} onClick={handleSubmit}>
+      <button
+        className="ballot_submit"
+        disabled={!isButtonEnabled}
+        onClick={handleSubmit}
+      >
         Submit
       </button>
     </div>
