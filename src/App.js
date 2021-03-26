@@ -21,9 +21,7 @@ function App() {
         </header>
         <Ballot setShowModal={setShowModal} />
       </div>
-      {showModal && (
-        <ResultsModal results={showModal} closeModal={closeModal} />
-      )}
+      {showModal && <ResultsModal closeModal={closeModal} />}
     </>
   );
 }
