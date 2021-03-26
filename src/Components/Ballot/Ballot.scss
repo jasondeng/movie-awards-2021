@@ -5,11 +5,25 @@
   margin-bottom: 20px;
 
   &_submit {
+    margin: 20px 0px;
     background-color: #009b86;
     align-self: flex-end;
 
     &:hover {
       background-color: #34ac9c;
+    }
+
+    &:disabled {
+      background-color: gray;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .ballot {
+    &_submit {
+      align-self: center;
     }
   }
 }

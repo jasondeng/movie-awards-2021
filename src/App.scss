@@ -16,6 +16,13 @@
   }
 }
 
+@media only screen and (max-width: 960px) {
+  .App {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
 button {
   border: none;
   background-color: transparent;
